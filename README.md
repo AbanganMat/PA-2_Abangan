@@ -4,21 +4,21 @@ This repository contains two Python exercises demonstrating basic **NumPy** oper
 
 ---
 
-## 📌 I. Intended Learning Outcomes
+##  I. Intended Learning Outcomes
 1. To identify the codes and functions incorporated in the NumPy library.  
 2. To be able to apply and use the different codes and functions in creating a Python program using the NumPy library.  
 
 ---
 
-## 📌 II. Instructions
+##  II. Instructions
 Write a Python script/code in **Jupyter Notebook** to solve the given problems.  
 You may submit your Jupyter notebook in the dedicated submission bin.  
 
 ---
 
-## 📌 III. Coding Exercises
+##  III. Coding Exercises
 
-### 🔹 1. Normalization Problem
+###  1. Normalization Problem
 Normalization is one of the most basic preprocessing techniques in data analytics.  
 It involves **centering** (subtracting the mean) and **scaling** (dividing by the standard deviation):  
 
@@ -56,7 +56,7 @@ else:
     print("\nLoaded Normalized Array from File:\n", loaded_X_normalized)
 
 
-#Divisble by 3
+### 2. Divisble by 3
 
 import numpy as np  
 
