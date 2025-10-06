@@ -62,7 +62,7 @@ else:
 ```
 <img width="565" height="368" alt="Screenshot 2025-10-06 at 08 28 38" src="https://github.com/user-attachments/assets/9bde6bc6-a29e-4d1f-a995-4a243c952b7b" />
 
-### 2. Divisble by 3
+### 2. Divisible by 3
 ```
 import numpy as np  # Import the NumPy library for numerical operations
 
