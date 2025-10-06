@@ -22,9 +22,8 @@ You may submit your Jupyter notebook in the dedicated submission bin.
 Normalization is one of the most basic preprocessing techniques in data analytics.  
 It involves **centering** (subtracting the mean) and **scaling** (dividing by the standard deviation):  
 ```
-\[
-Z = \frac{X - \bar{X}}{\sigma}
-\]
+Z = (X - X.mean()) / X.std()
+
 ```
 #### Code:
 ```python
