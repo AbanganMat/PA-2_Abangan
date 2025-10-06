@@ -1,4 +1,4 @@
-# NumPy Exercises: Normalization & Divisible by 3 Problems
+# NumPy Exercises: Normalization & Divisible by 3 Problems from Abangan
 
 This repository contains two Python exercises demonstrating basic **NumPy** operations such as array creation, normalization, reshaping, element selection, and saving/loading `.npy` files.  
 
@@ -21,61 +21,77 @@ You may submit your Jupyter notebook in the dedicated submission bin.
 ###  1. Normalization Problem
 Normalization is one of the most basic preprocessing techniques in data analytics.  
 It involves **centering** (subtracting the mean) and **scaling** (dividing by the standard deviation):  
-
+```
 \[
 Z = \frac{X - \bar{X}}{\sigma}
 \]
-
+```
 #### Code:
 ```python
-import numpy as np
+import numpy as np  # Import the NumPy library for numerical operations
 
-# Create 5x5 ndarray with random values
+# Create a 5x5 array (matrix) filled with random values between 0 and 1
 X = np.random.rand(5, 5)
 
-# Calculate mean and standard deviation
+# Calculate the mean (average) of all elements in the array
 mean_X = X.mean()
+
+# Calculate the standard deviation (how spread out the values are)
 std_X = X.std()
 
-# Check for standard deviation to avoid division by zero
+# Check if standard deviation is zero to avoid division by zero errors
 if std_X == 0:
     print("Standard deviation is zero, normalization cannot be performed.")
 else:
-    # Normalize array
+    # Normalize the array: (value - mean) / standard deviation
     X_normalized = (X - mean_X) / std_X
 
-    # Save normalized array to a .npy file
+    # Save the normalized array to a .npy file
     np.save('X_normalized.npy', X_normalized)
 
-    # Output: Original and Normalized Array
+    # Display the original array
     print("Original Array:\n", X)
+
+    # Display the normalized array
     print("\nNormalized Array:\n", X_normalized)
 
-    # Load and verify the saved normalized array
+    # Load the saved normalized array from the .npy file
     loaded_X_normalized = np.load('X_normalized.npy')
-    print("\nLoaded Normalized Array from File:\n", loaded_X_normalized)
 
+    # Show the loaded array to confirm it was saved and loaded correctly
+    print("\nLoaded Normalized Array from File:\n", loaded_X_normalized)
+```
+<img width="565" height="368" alt="Screenshot 2025-10-06 at 08 28 38" src="https://github.com/user-attachments/assets/9bde6bc6-a29e-4d1f-a995-4a243c952b7b" />
 
 ### 2. Divisble by 3
+```
+import numpy as np  # Import the NumPy library for numerical operations
 
-import numpy as np  
-
-# Create 10x10 ndarray of squares of integers from 1 to 100
+# Create an array of integers from 1 to 100
+# Then square each number to get their squares
 A = np.arange(1, 101)**2
-A = A.reshape((10, 10))  # Reshape into a 10x10 array
 
-# Output: 10x10 array
+# Reshape the 1D array into a 10x10 (2D) array
+A = A.reshape((10, 10))
+
+# Display the 10x10 array of squares
 print("10x10 Array of Squares of the First 100 Positive Integers:\n", A)
 
-# Determine elements divisible by 3 using modulo operation
+# Find elements that are divisible by 3 using the modulo (%) operator
+# The condition (A % 3 == 0) returns True for elements divisible by 3
 div_by_3 = A[A % 3 == 0]
 
-# Output: Elements divisible by 3
+# Display only the elements divisible by 3
 print("\nElements Divisible by 3:\n", div_by_3)
 
-# Save results to a .npy file
+# Save the elements divisible by 3 into a .npy file
 np.save('div_by_3.npy', div_by_3)
 
-# Load and verify the saved array
+# Load the saved array from the .npy file
 loaded_div_by_3 = np.load('div_by_3.npy')
+
+# Display the loaded array to verify it was saved and loaded correctly
 print("\nLoaded Elements Divisible by 3 from File:\n", loaded_div_by_3)
+
+```
+<img width="510" height="353" alt="Screenshot 2025-10-06 at 08 28 27" src="https://github.com/user-attachments/assets/ad579fea-d6ab-4380-a206-f07137217647" />
